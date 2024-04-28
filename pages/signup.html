@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/signup.css" />
+    <link rel="stylesheet" href="../styles/header-footer.css" />
+  </head>
+  <body>
+
+    <!-- Header Section-->
+    <header>
+      <h1 class="logo kanit-semibold"><a href="../index.html">Movie<span>Hub</span></a></h1>
+      <div class="search-bar">
+        <input type="search" name="search-movie" id="search-bar" placeholder="Search Movie" autocomplete="off">
+        <button class="search-button kanit-semibold pri-cta">Search</button>
+        <ul class="movie-list kanit-regular">
+        </ul>
+        <div class="notfound kanit-semibold">
+          Not Found!
+        </div>
+      </div>
+      <div class="user-container">
+        <button
+          class="user-button"
+          onclick="toggleUserButton(document.querySelector('.logout-box'),'grid',e)"
+          disabled
+        >
+          U
+        </button>
+        <div class="logout-box">
+          <p class="username kanit-semibold">Username</p>
+          <button class="pri-cta login kanit-semibold" onclick="logout()">Log-out</button>
+        </div>
+      </div>
+      <button class="pri-cta login kanit-semibold" onclick="loginInit()">Login</button>
+      <button
+        class="menu-button"
+        onclick="toggle(document.querySelector('.nav-menu'),'flex',event)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="#2B2024"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </button>
+    </header>
+    <nav class="nav-menu kanit-medium">
+      <a href="/">Trending</a>
+      <a href="/">Featured</a>
+      <a href="/">About Us</a>
+    </nav>
+    <div class="login-box kanit-regular">
+        <form>
+            <label for="username">Username</label>
+            <input type="text" name="username" id="username">
+            <label for="password">Password</label>
+            <input type="password" name="password" id="password">
+            <button class="login pri-cta">Log In</button>
+            <p class="invalid">..</p>
+        </form>
+        <p class="sub-text">Don't have account? <a href="../pages/signup.html">SignUp</a></p>
+    </div>
+
+    <section class="sign-up kanit-medium">
+        <h1 class="logo signup-heading">Sign<span>Up</span></h1>
+        <div class="signup-box kanit-regular">
+            <form>
+                <label for="username">Username</label>
+                <input type="text" name="username" id="username-ip">
+                <label for="password">Password</label>
+                <input type="password" name="password" id="password-ip">
+                <button class="login pri-cta kanit-semibold" id="signup-button" type="submit">Sign Up</button>
+            </form>
+            <a href="../index.html">Return to Login</a>
+        </div>    
+    </section>
+
+
+     <!--Footer-->
+     <footer class="kanit-medium">
+      <div class="copyright">
+        <p class="footer-copy">&copy;MovieHub</p>
+        <p class="since">since 2020</p>
+      </div>
+      <div class="footer-nav">
+        <a href="./signup.html">Top</a>
+        <a href="../index.html/#trending">Trending</a>
+        <a href="../index.html/#featured">Featured</a>
+      </div>
+      <div class="contact-details">
+        <p class="query">
+          Contact here
+          <p> <a href="mailto:mayankmchandratre@gmail.com" class="contact">movie@hub.com</a></p>
+         
+        </p>
+      </div>
+    </footer>
+
+    <script src="/app/modal-script.js"></script>
+    <script src="/app/signup.js"></script>
+    <script src="/app/general.js"></script>
+    <script src="/app/search.js"></script>
+</body>
+</html>

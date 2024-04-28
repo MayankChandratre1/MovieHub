@@ -1,0 +1,103 @@
+.poster{
+    min-height: 50vh;
+    display: grid;
+    place-items: center;
+    margin-block: 2rem;
+}
+
+.poster .movie-title{
+    font-size: 2rem;
+    color: var(--secondary);
+}
+
+.poster .img-container img{
+    box-shadow: 0px 0px 10px var(--neutral);
+    border-radius: 15px;
+}
+
+.info{
+    padding-inline: 2rem;
+    font-size: 1.2rem;
+}
+
+.info ul li{
+    margin-bottom: 1rem;
+}
+
+.rating {
+    padding: 2rem;
+    display: grid;
+    place-items: center;
+    gap: 3rem;
+    margin-block: 2rem;
+    position: relative;
+}
+
+.rating .rating-info{
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: var(--secondary);
+}
+
+.rating .rating-info .star{
+    font-size: 2.5rem;
+    color: var(--primary);
+}
+
+.rating .actions {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+} 
+
+.rating .actions button {
+    font-size: 1.2rem;
+    margin-inline: 1rem;
+}
+.rating .actions button:active {
+    scale:0.9;
+}
+
+.rating .actions button a{
+    text-decoration: none;
+    color: var(--tertiary);
+}
+
+.rate-box{
+    position: absolute;
+    display: none;
+    place-items: center;
+    padding: 2rem;
+    box-shadow: 0 0 5px var(--neutral);
+    border-radius: 15px;
+    background: #ffffff70;
+    backdrop-filter: blur(5px);
+}
+
+.rate-box .rate-system{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.rate-box .rate-system button{
+    border: none;
+    font-size: 1.5rem;
+    padding: 1rem;
+    background: none;
+    cursor: pointer;
+}
+
+.rate-box .rate-system button[disabled]{
+    background: var(--neutral);
+}
+
+.rate-box .rate-system .rate{
+    font-size: 2rem;
+    color: var(--neutral);
+}
+

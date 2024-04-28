@@ -1,0 +1,259 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="./styles/fonts.css" />
+    <link rel="stylesheet" href="./styles/header-footer.css" />
+    <link rel="stylesheet" href="./styles/homepage.css" />
+  </head>
+  <body>
+    <!-- Header Section-->
+    <header>
+      <h1 class="logo kanit-semibold">
+        <a href="./index.html">Movie<span>Hub</span></a>
+      </h1>
+      <div class="search-bar">
+        <input type="search" name="search-movie" id="search-bar" placeholder="Search Movie" autocomplete="off">
+        <button class="search-button kanit-semibold pri-cta">Search</button>
+        <ul class="movie-list kanit-regular">
+        </ul>
+        <div class="notfound kanit-semibold">
+          Not Found!
+        </div>
+      </div>
+      <div class="user-container">
+        <button
+          class="user-button"
+          onclick="toggleUserButton(document.querySelector('.logout-box'),'grid',e)"
+          disabled
+        >
+          U
+        </button>
+        <div class="logout-box">
+          <p class="username kanit-semibold">Username</p>
+          <button class="pri-cta login kanit-semibold" onclick="logout()">Log-out</button>
+        </div>
+      </div>
+      <button class="pri-cta login kanit-semibold" onclick="loginInit()">Login</button>
+      <button
+        class="menu-button"
+        onclick="toggle(document.querySelector('.nav-menu'),'flex',event)"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="25"
+          height="25"
+          fill="#2B2024"
+          class="bi bi-list"
+          viewBox="0 0 16 16"
+        >
+          <path
+            fill-rule="evenodd"
+            d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+          />
+        </svg>
+      </button>
+    </header>
+    <nav class="nav-menu kanit-medium">
+      <a href="#trending">Trending</a>
+      <a href="#featured">Featured</a>
+      <a href="#aboutus">About Us</a>
+    </nav>
+    <div class="login-box kanit-regular">
+      <form>
+        <label for="username">Username</label>
+        <input type="text" name="username" id="username" />
+        <label for="password">Password</label>
+        <input type="password" name="password" id="password" />
+        <button class="login pri-cta">Log In</button>
+        <p class="invalid">..</p>
+      </form>
+      <p class="sub-text">
+        Don't have account? <a href="./pages/signup.html">SignUp</a>
+      </p>
+    </div>
+
+    <!-- Hero Section -->
+    <section class="hero kanit-medium">
+      <div>
+        <h1 class="logo hero-heading">Movie<span>Hub</span></h1>
+        <p class="desc kanit-thin"><i>Heaven Of Movies</i></p>
+      </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class="trending kanit-medium" id="trending">
+      <h2 class="sec-heading">Trending</h2>
+      <div class="card-container">
+        <!-- <button class="arrow left">&lang;</button> -->
+
+        <div class="card">
+          <div class="card-img-container">
+            <img src="/assets/images/apurva.webp" alt="image" class="card-img">
+          </div>
+          <h4 class="movie-title">Apurva</h4>
+          <p class="desc kanit-regular">Thriller/Drama</p>
+          <button class="sec-cta learn-more"><a href="/pages/apurva.html">Learn More..</a></button>
+          </div>
+
+          <div class="card">
+            <div class="card-img-container">
+              <img src="/assets/images/bhool_bhuliya2.webp" alt="image" class="card-img">
+            </div>
+            <h4 class="movie-title">Bhool Bhulaiyaa 2</h4>
+            <p class="desc kanit-regular">Horror/Comedy</p>
+            <button class="sec-cta learn-more"><a href="/pages/bhoolbhulaiyaa2.html">Learn More..</a></button>
+            </div>
+
+            <div class="card">
+              <div class="card-img-container">
+                <img src="/assets/images/chandigarh_kare_aashiqi.webp" alt="image" class="card-img">
+              </div>
+              <h4 class="movie-title">Chandigarh Kare Aashiqui</h4>
+              <p class="desc kanit-regular">Romance/Drama</p>
+              <button class="sec-cta learn-more"><a href="/pages/chandigarhkareashiqui.html">Learn More..</a></button>
+              </div>
+
+              <div class="card">
+                <div class="card-img-container">
+                  <img src="../assets/images/gadar_2.webp" alt="image" class="card-img">
+                </div>
+                <h4 class="movie-title">Gadar 2</h4>
+                <p class="desc kanit-regular">Action/Thriller</p>
+                <button class="sec-cta learn-more"><a href="/pages/gadar2.html">Learn More..</a></button>
+                </div>
+
+                <div class="card">
+                  <div class="card-img-container">
+                    <img src="../assets/images/housefull4.webp" alt="image" class="card-img">
+                  </div>
+                  <h4 class="movie-title">Housefull 4</h4>
+                  <p class="desc kanit-regular">Comedy/Action</p>
+                  <button class="sec-cta learn-more"><a href="/pages/housefull4.html">Learn More..</a></button>
+                  </div>
+
+
+                    <div class="card">
+                      <div class="card-img-container">
+                        <img src="../assets/images/jawan.webp" alt="image" class="card-img">
+                      </div>
+                      <h4 class="movie-title">Jawan</h4>
+                      <p class="desc kanit-regular"> Action/Thriller</p>
+                      <button class="sec-cta learn-more"><a href="/pages/jawan.html">Learn More..</a></button>
+                      </div>
+        
+
+        
+
+        
+
+        <!-- <button class="arrow right">&rang;</button> -->
+      </div>
+    </section>
+
+    <!-- Trending Section -->
+    <section class=" featured trending kanit-medium" id="featured">
+      <h2 class="sec-heading">Featured</h2>
+      <div class="card-container">
+        <!-- <button class="arrow left">&lang;</button> -->
+
+        <div class="card">
+          <div class="card-img-container">
+            <img src="./assets/images/3_Idiots.webp" alt="image" class="card-img">
+          </div>
+          <h4 class="movie-title">3 Idiots</h4>
+          <p class="desc kanit-regular"> Comedy, Drama</p>
+          <button class="sec-cta learn-more"><a href="/pages/3idiots.html">Learn More..</a></button>
+        </div>
+
+        <div class="card">
+          <div class="card-img-container">
+            <img src="./assets/images/bajrangi_bhaijaan.webp" alt="image" class="card-img">
+          </div>
+          <h4 class="movie-title">Bajrangi Bhaijaan</h4>
+          <p class="desc kanit-regular"> Action/Adventure</p>
+          <button class="sec-cta learn-more"><a href="./pages/bajrangibhaijaan.html">Learn More..</a></button>
+        </div>
+
+        <div class="card">
+          <div class="card-img-container">
+            <img src="/assets/images/chennai_express.webp" alt="image" class="card-img">
+          </div>
+          <h4 class="movie-title">Chennai Express</h4>
+          <p class="desc kanit-regular">Comedy/Action</p>
+          <button class="sec-cta learn-more"><a href="/pages/chennaiexpress.html">Learn More..</a></button>
+          </div>
+
+          <div class="card">
+            <div class="card-img-container">
+              <img src="/assets/images/jab_we_met.webp" alt="image" class="card-img">
+            </div>
+            <h4 class="movie-title">Jab We Met</h4>
+            <p class="desc kanit-regular">Romance/Comedy</p>
+            <button class="sec-cta learn-more"><a href="/pages/jabwemet.html">Learn More..</a></button>
+            </div>
+
+            <div class="card">
+              <div class="card-img-container">
+                <img src="/assets/images/koi mil gaya.webp" alt="image" class="card-img">
+              </div>
+              <h4 class="movie-title">Koi Mil Gaya</h4>
+              <p class="desc kanit-regular"> Sci-fi/Romance</p>
+              <button class="sec-cta learn-more"><a href="/pages/koimilgaya.html">Learn More..</a></button>
+              </div>
+
+              <div class="card">
+                <div class="card-img-container">
+                  <img src="/assets/images/sanam_teri_kasam.webp" alt="image" class="card-img">
+                </div>
+                <h4 class="movie-title">Sanam Teri Kasam</h4>
+                <p class="desc kanit-regular">Romance/Musical</p>
+                <button class="sec-cta learn-more"><a href="/pages/sanamterikasam.html">Learn More..</a></button>
+                </div>
+        <!-- <button class="arrow right">&rang;</button> -->
+      </div>
+    </section>
+
+    <!--About Us section-->
+
+    <section class="aboutus kanit-medium" id="aboutus">
+      <h2 class="sec-heading">
+        About <span class="logo">Movie<span>Hub</span></span>
+      </h2>
+      <p class="desc">
+        MovieHub, born from the shared zeal of a college group in 2020, stands as a beacon for cinephiles. This comprehensive movie critic site offers a curated selection of trending films, accompanied by in-depth ratings and insightful information. Dive into a world of cinematic wonder, where passionate enthusiasts meticulously analyze and review the latest releases. Whether you seek box office hits or hidden gems, MovieHub provides a platform to explore, discover, and engage with the art of cinema. Join us on a journey through the captivating world of film, where every frame tells a story and sparks endless conversation.
+      </p>
+      <p class="end">&dot;&dot;&dot;</p>
+    </section>
+
+
+    <!--Footer-->
+    <footer class="kanit-medium">
+      <div class="copyright">
+        <p class="footer-copy">&copy;MovieHub</p>
+        <p class="since">since 2020</p>
+      </div>
+      <div class="footer-nav">
+        <a href="/" class="footer-links">Top</a>
+        <a href="#trending" class="footer-links">Trending</a>
+        <a href="#featured" class="footer-links">Featured</a>
+      </div>
+      <div class="contact-details">
+        <p class="query">
+          Contact here
+          <p> <a href="mailto:mayankmchandratre@gmail.com" class="contact">movie@hub.com</a></p>
+         
+        </p>
+      </div>
+    </footer>
+
+
+    <!--Scripts-->
+    <script src="./app/general.js"></script>
+    <script src="./app/modal-script.js"></script>
+    <script src="./app/signup.js"></script>
+    <script src="./app/search.js"></script>
+  </body>
+</html>

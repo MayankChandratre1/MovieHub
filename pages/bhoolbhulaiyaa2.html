@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MovieHub</title>
+    <link rel="stylesheet" href="../styles/fonts.css" />
+    <link rel="stylesheet" href="../styles/header-footer.css" />
+    <link rel="stylesheet" href="../styles/moviepage.css">
+</head>
+<body>
+    <!--Header-->
+    <header>
+        <h1 class="logo kanit-semibold"><a href="/index.html">Movie<span>Hub</span></a></h1>
+        <div class="search-bar">
+          <input type="search" name="search-movie" id="search-bar" placeholder="Search Movie" autocomplete="off">
+          <button class="search-button kanit-semibold pri-cta">Search</button>
+          <ul class="movie-list kanit-regular">
+          </ul>
+          <div class="notfound kanit-semibold">
+            Not Found!
+          </div>
+        </div>
+        <div class="user-container">
+          <button
+          class="user-button"
+          onclick="toggleUserButton(document.querySelector('.logout-box'),'grid',e)"
+          disabled
+        >
+          U
+        </button>
+          <div class="logout-box">
+            <p class="username kanit-semibold">Username</p>
+            <button class="pri-cta login kanit-semibold" onclick="logout(event)">Log-out</button>
+          </div>
+        </div>
+        <button class="pri-cta login kanit-semibold" onclick="loginInit()">Login</button>
+        <button
+          class="menu-button"
+          onclick="toggle(document.querySelector('.nav-menu'),'flex',event)"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="25"
+            height="25"
+            fill="#2B2024"
+            class="bi bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+        </button>
+      </header>
+      <nav class="nav-menu kanit-medium">
+        <a href="/">Trending</a>
+        <a href="/">Featured</a>
+        <a href="/">About Us</a>
+      </nav>
+      <div class="login-box kanit-regular">
+          <form>
+              <label for="username">Username</label>
+              <input type="text" name="username" id="username">
+              <label for="password">Password</label>
+              <input type="password" name="password" id="password">
+              <button class="login pri-cta">Log In</button>
+              <p class="invalid">..</p>
+          </form>
+          <p class="sub-text">Don't have account? <a href="../pages/signup.html">SignUp</a></p>
+      </div>
+      <!-- Main -->
+      <section class="poster kanit-medium">
+        <div class="img-container">
+            <img src="../assets/images/bhool_bhuliya2.webp" alt="movie-poster">
+        </div>
+        <h2 class="movie-title">Bhool Bhulaiyaa 2</h2>
+      </section>
+
+
+      <section class="info">
+        <ul>
+           <li class="kanit-bold">Name: <span class="kanit-extralight">Bhool Bhulaiyaa 2</span></li>
+           <li class="kanit-bold">Release Date: <span class="kanit-extralight">20 May 2022</span></li>
+           <li class="kanit-bold">Genre: <span class="kanit-extralight">Horror/Comedy</span></li>
+           <li class="kanit-bold">Time: <span class="kanit-extralight">2h 25m</span></li>
+           <li class="kanit-bold">Description: <span class="kanit-extralight">After an accident, Ruhan agrees to accompany Reet back home. However, due to a series of untimely incidents, he gets caught up in her family's skirmish.</span></li>
+           <li class="kanit-bold">Cast: <span class="kanit-extralight">
+              Tabu, Kartik Aaryan, Kiara Advani, Rajpal Naurang Yadav, Amar Upadhyay</span></li>
+        </ul>
+        </section>
+
+
+      <section class="rating kanit-bold">
+        <div class="rating-info">
+            <span class="star">&starf;</span><span class="number">4.4</span>
+        </div>
+
+        <div class="actions ">
+            <button class="pri-cta kanit-medium"><a href="https://youtu.be/P2KRKxAb2ek?si=cW0X5xMGimQSlH5_">Watch Trailer</a></button>
+            <button class="pri-cta kanit-medium rate-button" >Rate Movie</button>
+        </div>
+
+        <div class="rate-box">
+            <div class="rate-system">
+                <button class="change kanit-bold" onclick="change(-1)">&minus;</button>
+            <p class="rate">0</p>
+            <button class="change kanit-bold" onclick="change(1)">&plus;</button>
+            </div>
+            <button class="submit pri-cta kanit-medium" onclick="rate(100)">Login to rate</button>
+        </div>
+      </section>
+
+      <!--Footer-->
+     <footer class="kanit-medium">
+        <div class="copyright">
+          <p class="footer-copy">&copy;MovieHub</p>
+          <p class="since">since 2020</p>
+        </div>
+        <div class="footer-nav">
+          <a href="./signup.html">Top</a>
+          <a href="../index.html/#trending">Trending</a>
+          <a href="../index.html/#featured">Featured</a>
+        </div>
+        <div class="contact-details">
+          <p class="query">
+            Contact here
+            <p> <a href="mailto:mayankmchandratre@gmail.com" class="contact">movie@hub.com</a></p>
+           
+          </p>
+        </div>
+      </footer>
+  
+      <script src="../app/general.js"></script>
+      <script src="../app/modal-script.js"></script>
+      <script src="../app/signup.js"></script>
+      <script src="../app/rate.js"></script>
+      <script src="../app/search.js"></script>
+
+</body>
+</html>

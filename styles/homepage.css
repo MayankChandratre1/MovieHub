@@ -1,0 +1,139 @@
+.hero{
+    height: 80dvh;
+    background: url("../assets/images/back01.webp");
+    background-size: cover;
+    position: relative;
+    z-index: -2;
+}
+
+.hero:before{
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background:linear-gradient(to right, rgba(0, 0, 0, 0.782),transparent) ;
+    z-index: -1;
+}
+
+.hero {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 1rem;
+    color:var(--tertiary);
+    user-select: none;
+}
+
+.hero > *{
+    margin-left:2rem;
+    font-size: 1.3rem;
+}
+
+.hero .hero-heading{
+    font-size: 4rem;
+    flex-grow: 0;
+}
+
+
+.trending{
+    color: var(--tertiary);
+    background: linear-gradient(135deg, var(--secondary) 50%, var(--tertiary) 50%);
+    padding: 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.trending h2{
+    font-size: 2.5rem;
+}
+
+.trending .card-container{
+    display: flex;
+    gap: 1rem;
+}
+
+.trending .card-container .arrow{
+    cursor: pointer;
+    padding: 1rem;
+    background: var(--tertiary);
+    color: var(--secondary);
+    border: none;
+    border-radius: 5px;
+    align-self: center;
+    box-shadow: 0 0 5px var(--neutral);
+}
+
+.trending .card-container .card{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background-color: var(--neutral);
+    padding: 0.7rem;
+    border-radius: 10px;
+    max-width: 13vw;
+}
+
+.trending .card-container .card h4{
+    font-size: 1.4rem;
+    text-wrap: wrap;
+}
+
+
+.trending .card-container .card .card-img-container{
+    height: 70%;
+    overflow: hidden;
+}
+.trending .card-container .card .card-img-container img{
+    object-fit: cover;
+}
+
+.trending .card-container .card button{
+    background-color: var(--tertiary);
+    padding: 0.5rem;
+    border: none;
+    border-radius: 10px;
+}
+
+.trending .card-container .card button a{
+    color: var(--neutral);
+    text-decoration: none;
+    cursor: pointer;
+    width: 100%;
+    
+}
+
+.featured{
+    background: linear-gradient(-135deg, var(--secondary) 50%, var(--tertiary) 50%);
+    color: var(--secondary);
+}
+
+.featured .card{
+    color: var(--tertiary);
+}
+
+
+.aboutus{
+    display: grid;
+    place-items: center;
+    text-align: justify;
+    padding: 2rem;
+}
+
+.aboutus .sec-heading{ 
+    font-size: 2.5rem;
+    margin: 2rem;
+}
+
+.aboutus .desc{
+    opacity: 0.7;
+}
+
+.aboutus .end{
+    color: var(--secondary);
+    font-size: 4rem;
+}
+
+
+
